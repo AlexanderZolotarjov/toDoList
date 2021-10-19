@@ -1,0 +1,29 @@
+.todoListItemButton {
+  margin: 0 2px;
+  background: rgb(228, 228, 228);
+
+  border-radius: 6px;
+  width: 40px;
+  height: 40px;
+  position: relative;
+}
+.todoListItemButtonImportant {
+  border: 1px solid #188753af;
+}
+.todoListItemButtonDelete {
+  border: 1px solid #dd3546a9;
+}
+.todoListItemButtonImportant:active {
+  background: #18875344;
+}
+.todoListItemButtonDelete:active {
+  background: #dd35464b;
+}
+
+.svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+   

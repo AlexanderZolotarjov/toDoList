@@ -1,0 +1,39 @@
+
+.enterButton {
+  display: flex;
+  height: 100%;
+  max-width: 120px;
+}
+
+.enterButtonItem {
+  padding: 0 15px;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.842);
+}
+.enterButtonItem:hover {
+  cursor: pointer;
+}
+.enterButtonItem:active {
+  background: rgba(165, 42, 42, 0.178);
+}
+.enterButtonItem:hover {
+  cursor: pointer;
+}
+
+.enterButtonItem_all {
+  background: #82c3ff;
+  border-right: 1px solid #55555d;
+  border-radius: 6px 0px 0px 6px;
+}
+.enterButtonItem_active {
+  background: #43c98a;
+  border-right: 1px solid #55555d;
+}
+.enterButtonItem_done {
+  background: #dd35466e;
+  border-radius: 0px 6px 6px 0px;
+}
+.enterButtonItem_add {
+  background: #dfbf68;
+  border-radius: 6px;
+}

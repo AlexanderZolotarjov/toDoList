@@ -1,0 +1,12 @@
+.headerStatistics {
+  margin: 0;
+  padding: 10px;
+  font-weight: 500;
+  color: rgb(80, 75, 75);
+  display: flex;
+  align-items: center;
+}
+.headerStatistics span {
+  text-decoration: underline;
+  font-style: italic;
+}

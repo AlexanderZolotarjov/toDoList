@@ -1,0 +1,34 @@
+.body {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+}
+
+.header {
+  grid-area: header;
+  padding: 10px 10px;
+}
+.main {
+  grid-area: main;
+  padding: 10px 15px;
+}
+@media(min-width: 700px) {
+  .main {
+    padding: 0 180px;
+  }
+}
+.footer {
+  grid-area: footer;
+  padding: 10px 10px;
+}
+@media(min-width: 700px) {
+  .footer, .header {
+    padding: 10px 70px;
+  }
+}
+

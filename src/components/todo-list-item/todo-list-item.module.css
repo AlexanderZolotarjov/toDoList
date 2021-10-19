@@ -1,0 +1,35 @@
+.todoListItem {
+  margin: 5px 0;
+  padding: 10px 10px 10px 10px;
+  border-radius: 6px;
+  display: block;
+  border: 1px solid #494d4c;
+  list-style: none;
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.todoListItem:hover p {
+  cursor: pointer;
+}
+
+.todoListItemDone p {
+  text-decoration: line-through;
+}
+.todoListItemImportant p {
+  color: blue;
+}
+
+
+.todoListItem p {
+  line-height: 28px;
+
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* Internet Explorer/Edge */
+  user-select: none;           /* Non-prefixed version, currently
+                                  not supported by any browser */
+}

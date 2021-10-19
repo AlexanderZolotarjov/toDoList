@@ -1,0 +1,12 @@
+.footer {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+}
+
+.addField {
+
+}
+.addButton {
+  height: 44px;
+}
