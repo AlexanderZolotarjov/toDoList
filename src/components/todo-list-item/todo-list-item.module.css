@@ -10,19 +10,13 @@
   justify-content: space-between;
   align-items: center;
 }
-.todoListItem:hover p {
-  cursor: pointer;
-}
 
-.todoListItemDone p {
-  text-decoration: line-through;
-}
-.todoListItemImportant p {
-  color: blue;
-}
-
-
-.todoListItem p {
+.todoListItem > button {
+  padding: 0 5px;
+  background: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 22px;
+  color: rgb(80, 75, 75);
   line-height: 28px;
 
   -webkit-touch-callout: none; /* iOS Safari */
@@ -32,4 +26,18 @@
   -ms-user-select: none;       /* Internet Explorer/Edge */
   user-select: none;           /* Non-prefixed version, currently
                                   not supported by any browser */
+}
+.todoListItem > button:focus {
+  padding: 0 3px;
+  border: 2px solid rgba(0, 0, 255, 0.349);
+}
+.todoListItem > button:hover {
+  cursor: pointer;
+}
+
+.todoListItemDone > button {
+  text-decoration: line-through;
+}
+.todoListItemImportant > button {
+  color: blue;
 }

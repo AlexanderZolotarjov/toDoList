@@ -8,52 +8,56 @@ import EnterButtons from '../../enter-buttons';
 
 export default class Footer extends Component {
 
+  textInput = React.createRef()
+
   state = {
-    noteEnterText: ''
+    noteEnterText: '',
+    buttonsBottomData: [{ id: 1, type: 'add' }],
+    inputBottomData: [{ id: 1, type: 'text' }]
   };
 
-  onChangeText = (noteEnterPanel) => {
+  onChangeText = (e) => {
     this.setState(() => {
       return {
-        noteEnterText: noteEnterPanel.current.value
+        noteEnterText: e.target.value
       }
     })
   }
   
-  onButtonClick = () => {
+  onSubmit = (e) => {
+    e.preventDefault();
     this.setState(() => {
-      return {
-        noteEnterText: ''
-      }
+      return { noteEnterText: '' }
     })
-    this.props.addNote(this.state.noteEnterText)
+    this.props.addNote(this.state.noteEnterText);
+    this.textInput.current.focus();
   }
+
 
   render() {
     const { className } = this.props;
-
-    const buttonsBottomData = [
-      { id: 1, type: 'add' }
-    ];
-    
-    const inputBottomData = [
-      { id: 1, type: 'text' }
-    ];
+    const { noteEnterText, inputBottomData, buttonsBottomData } = this.state;
 
     return (
-      <div className={cn(className, styles.footer)}>
+      <form
+        className={cn(
+          className,
+          styles.footer
+        )}
+        onSubmit={this.onSubmit}
+      >
         <EnterPanel
+          textInput={this.textInput}
           className={styles.addField}
-          currentValue={this.state.noteEnterText}
+          currentValue={noteEnterText}
           onChangeText={this.onChangeText}
           inputBottomData={inputBottomData}
         />
         <EnterButtons
           className={styles.addButton}
-          onButtonClick={this.onButtonClick}
           buttonsData={buttonsBottomData}
         />
-      </div>
+      </form>
     )
   }
 };

@@ -8,12 +8,15 @@ import HeaderStatistics from '../../header-statistics';
 import EnterPanel from '../../enter-panel';
 import EnterButtons from '../../enter-buttons';
 
-const Header = ({ className, ...props }) => {
+const Header = ({
+  className,
+  activeCount,
+  doneCount,
+  onSearchText,
+  onFilterType,
+  noteFilter
+}) => {
 
-  const statisticsData = {
-    moreToDo: 1,
-    done: 3
-  };
   const buttonsTopData = [
     { id: 1, type: 'all' },
     { id: 2, type: 'active' },
@@ -21,11 +24,33 @@ const Header = ({ className, ...props }) => {
   ];
 
   return (
-    <div className={cn(className, styles.header)}>
-      <HeaderTitle className={styles.headerTitle} />
-      <HeaderStatistics className={styles.headerStatistics} statisticsData={statisticsData} />
-      <EnterPanel className={styles.enterPanel} />
-      <EnterButtons className={styles.enterButtons} buttonsData={buttonsTopData} />
+    <div
+      className={cn(
+        className,
+        styles.header
+      )}
+    >
+      <HeaderTitle
+        className={styles.headerTitle}
+      />
+      <HeaderStatistics
+        activeCount={activeCount}
+        doneCount={doneCount}
+        className={styles.headerStatistics}
+      />
+      <EnterPanel
+        className={styles.enterPanel}
+
+        onSearchText={onSearchText}
+      />
+      <EnterButtons
+        className={styles.enterButtons}
+
+        buttonsData={buttonsTopData}
+        noteFilter={noteFilter}
+
+        onFilterType={onFilterType}
+      />
     </div>
   )
 };

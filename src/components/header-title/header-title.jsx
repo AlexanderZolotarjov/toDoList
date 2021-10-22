@@ -3,13 +3,13 @@ import cn from 'classnames';
 
 import styles from './header-title.module.css';
 
-const HeaderTitle = ({ className, ...props }) => {
+const HeaderTitle = ({ className }) => {
   return (
     <div className={cn(
         className,
         styles.headerTitle
       )}>
-      <h1>My Todo List</h1>
+      <h1>Todo List</h1>
     </div>
   )
 };

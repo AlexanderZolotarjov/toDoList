@@ -1,12 +1,16 @@
 .todoListItemButton {
   margin: 0 2px;
   background: rgb(228, 228, 228);
-
   border-radius: 6px;
   width: 40px;
   height: 40px;
   position: relative;
 }
+
+.todoListItemButton:focus {
+  border: 2px solid rgba(0, 0, 255, 0.349);
+}
+
 .todoListItemButtonImportant {
   border: 1px solid #188753af;
 }
@@ -26,4 +30,3 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
-   

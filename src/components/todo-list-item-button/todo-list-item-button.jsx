@@ -5,7 +5,11 @@ import styles from './todo-list-item-button.module.css';
 import SvgDelete from './delete.svg';
 import SvgImportant from './important.svg';
 
-const TodoListItemButton = ({ type, onToggleImportant, onDeleted } ) => {
+const TodoListItemButton = ({
+  type,
+  onToggleImportant,
+  onDeleted
+} ) => {
 
   return (
     <>

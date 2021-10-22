@@ -4,36 +4,47 @@
   height: 100%;
   max-width: 120px;
 }
-
 .enterButtonItem {
-  padding: 0 15px;
+  padding: 0px 15px;
   font-size: 16px;
   color: rgba(255, 255, 255, 0.842);
 }
+
 .enterButtonItem:hover {
   cursor: pointer;
 }
-.enterButtonItem:active {
-  background: rgba(165, 42, 42, 0.178);
-}
-.enterButtonItem:hover {
-  cursor: pointer;
+.enterButtonItem:focus {
+  box-shadow: 0px 0px 0px 3px rgba(0, 0, 255, 0.349);
 }
 
 .enterButtonItem_all {
-  background: #82c3ff;
+  background: #82c3ff7c;
   border-right: 1px solid #55555d;
   border-radius: 6px 0px 0px 6px;
 }
 .enterButtonItem_active {
-  background: #43c98a;
+  background: #43c98a7e;
   border-right: 1px solid #55555d;
 }
 .enterButtonItem_done {
-  background: #dd35466e;
+  background: #dd354633;
   border-radius: 0px 6px 6px 0px;
 }
 .enterButtonItem_add {
-  background: #dfbf68;
+  background: #dfbf68b7;
   border-radius: 6px;
+}
+
+.enterButtonItem_add:active {
+  background: #d39e0db7;
+}
+
+.enterButtonItem_allBright {
+  background: #44a5ff;
+}
+.enterButtonItem_activeBright {
+  background: #13c371;
+}
+.enterButtonItem_doneBright {
+  background: #dd3546d7;
 }

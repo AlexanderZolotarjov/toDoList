@@ -3,15 +3,19 @@ import cn from 'classnames';
 
 import styles from './header-statistics.module.css';
 
-const HeaderStatistics = ({ className, statisticsData: { moreToDo, done } } ) => {
-  
+const HeaderStatistics = ({
+  className,
+  activeCount,
+  doneCount
+} ) => {
+
   return (
     <div className={cn(
         className,
         styles.headerStatistics
       )}>
       <p>
-        <span>{moreToDo}</span> more to do, <span>{done}</span> done
+        <span>{activeCount}</span> active, <span>{doneCount}</span> done
       </p>
     </div>
   );

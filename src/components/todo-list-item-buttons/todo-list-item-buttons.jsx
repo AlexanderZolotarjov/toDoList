@@ -2,7 +2,10 @@ import React from 'react';
 import TodoListItemButton from '../todo-list-item-button/todo-list-item-button';
 import styles from './todo-list-item-buttons.module.css';
 
-const TodoListItemButtons = ({ onToggleImportant, onDeleted } ) => {
+const TodoListItemButtons = ({
+  onToggleImportant,
+  onDeleted
+}) => {
 
   const buttonData = [
     { id: 1, type: 'important' },
