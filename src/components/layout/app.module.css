@@ -17,18 +17,27 @@
   grid-area: main;
   padding: 10px 15px;
 }
-@media(min-width: 700px) {
-  .main {
-    padding: 0 180px;
-  }
-}
 .footer {
   grid-area: footer;
   padding: 10px 10px;
 }
-@media(min-width: 700px) {
+@media(min-width: 1024px) {
+  .main {
+    padding: 0 180px;
+  }
+}
+@media(min-width: 768px) {
   .footer, .header {
     padding: 10px 70px;
   }
+  .main {
+    padding: 0 100px;
+  }
 }
+@media(max-width: 425px) {
+  .footer, .header {
+    padding: 5px 10px;
+  }
+}
+
 

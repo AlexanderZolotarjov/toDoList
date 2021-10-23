@@ -11,9 +11,12 @@ export default class EnterButtons extends Component {
 
     const {
       className,
+
       buttonsData,
-      onFilterType,
-      noteFilter
+      noteFilter,
+      isMobileButton,
+
+      onFilterType
     } = this.props;
 
     const buttons = buttonsData.map((item) => {
@@ -32,10 +35,14 @@ export default class EnterButtons extends Component {
       <div
         className={cn(
           className,
-          styles.enterButtons
+          styles.enterButtons, {
+          [styles.enterButtons_header]:
+            buttonsData.length === 3 &&
+            isMobileButton === false
+        }
         )}
       >
-        { buttons }
+        {buttons}
       </div>
     );
   }

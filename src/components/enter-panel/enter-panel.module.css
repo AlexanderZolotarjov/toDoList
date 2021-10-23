@@ -6,11 +6,25 @@
   border: 1px solid rgb(119, 117, 117);
   resize: none;
 }
-
 .enterPanelArea {
   resize: none;
   height: 80px;
 }
 .enterPanelArea:focus, .enterPanel:focus {
   box-shadow: 0px 0px 0px 2px rgba(0, 0, 255, 0.349);
+}
+@media (max-width: 768px) {
+  .enterPanel {
+    padding: 8px;
+    font-size: 18px;
+  }
+}
+@media (max-width: 425px) {
+  .enterPanel {
+    padding: 8px;
+    font-size: 16px;
+  }
+  .enterPanelArea {
+    height: 60px;
+  }
 }

@@ -1,8 +1,23 @@
 .headerTitle {
   font-size: 30px;
   margin: 0;
-  padding: 10px;
+  padding: 4px 4px 6px 4px;
   color: rgb(80, 75, 75);
   display: flex;
   align-items: center;
+}
+
+@media (max-width: 768px) {
+  .headerTitle {
+    font-size: 24px;
+  }
+}
+@media (max-width: 425px) {
+  .headerTitle {
+    font-size: 20px;
+  }
+}
+
+.svg {
+  margin: 0 8px 0 0;
 }

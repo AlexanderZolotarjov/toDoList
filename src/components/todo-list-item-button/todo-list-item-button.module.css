@@ -6,6 +6,15 @@
   height: 40px;
   position: relative;
 }
+@media (max-width: 768px) {
+  .todoListItemButton {
+    width: 34px;
+    height: 34px;
+  }
+  .svg {
+    height: 20px;
+  }
+}
 
 .todoListItemButton:focus {
   border: 2px solid rgba(0, 0, 255, 0.349);

@@ -9,9 +9,10 @@ import WindowMessage from '../window-message';
 
 import styles from './app.module.css';
 
-export default  class App extends Component {
+export default class App extends Component {
 
   state = {
+    isMobileButton: false,
     isWindow: false,
     noteFilter: 'all', // all, active, done
     noteSearchText: '',
@@ -34,7 +35,7 @@ export default  class App extends Component {
   deleteNote = (id) => {
     this.setState(({ todoData }) => {
       const idx = todoData.findIndex((el) => el.id === id);
-      const newArray = [ 
+      const newArray = [
         ...todoData.slice(0, idx),
         ...todoData.slice(idx + 1)
       ]
@@ -45,7 +46,7 @@ export default  class App extends Component {
   }; // Удаляем заметку
 
   addNote = (value) => {
-    if(value !== '') {
+    if (value !== '') {
       this.setState(({ todoData }) => {
         const newItem = createNote(value);
         const newArray = [
@@ -115,13 +116,17 @@ export default  class App extends Component {
     })
   }; // Переключаем заметку между "сделана/не сделана"
 
+  onToggleMobileButton = () => {
+    this.setState({ isMobileButton: !this.state.isMobileButton })
+  } // Переключение внешнего вида мобильной кнопки
+
   onOkEmptyMessage = () => {
     this.setState({ isWindow: false })
-  }
+  } // Скрытие предупреждения о том что поле ввода пустое
 
   render() {
 
-    const { todoData, noteSearchText, noteFilter, isWindow } = this.state;
+    const { todoData, noteSearchText, noteFilter, isWindow, isMobileButton } = this.state;
 
     const window = isWindow ?
       <WindowMessage onOkEmptyMessage={this.onOkEmptyMessage} /> : <></>;
@@ -140,9 +145,11 @@ export default  class App extends Component {
           activeCount={activeCount}
           doneCount={doneCount}
           noteFilter={noteFilter}
+          isMobileButton={isMobileButton}
 
           onSearchText={this.onSearchText}
           onFilterType={this.onFilterType}
+          onToggleMobileButton={this.onToggleMobileButton}
         />
         <Main
           className={styles.main}

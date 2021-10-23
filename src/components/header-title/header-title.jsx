@@ -1,7 +1,10 @@
 import React from 'react';
+import { ReactSVG } from 'react-svg';
 import cn from 'classnames';
 
 import styles from './header-title.module.css';
+
+import SvgPencil from './pencil.svg';
 
 const HeaderTitle = ({ className }) => {
   return (
@@ -9,7 +12,11 @@ const HeaderTitle = ({ className }) => {
         className,
         styles.headerTitle
       )}>
-      <h1>Todo List</h1>
+      <ReactSVG
+        className={styles.svg}
+        src={SvgPencil}
+      />
+      <h1>To-Do List</h1>
     </div>
   )
 };

@@ -7,14 +7,20 @@ import HeaderTitle from '../../header-title';
 import HeaderStatistics from '../../header-statistics';
 import EnterPanel from '../../enter-panel';
 import EnterButtons from '../../enter-buttons';
+import MobileButton from '../../mobile-button';
+
 
 const Header = ({
   className,
+
   activeCount,
   doneCount,
+  noteFilter,
+  isMobileButton,
+
   onSearchText,
   onFilterType,
-  noteFilter
+  onToggleMobileButton
 }) => {
 
   const buttonsTopData = [
@@ -48,8 +54,16 @@ const Header = ({
 
         buttonsData={buttonsTopData}
         noteFilter={noteFilter}
+        isMobileButton={isMobileButton}
 
         onFilterType={onFilterType}
+      />
+      <MobileButton
+        className={styles.mobileButton}
+
+        isMobileButton={isMobileButton}
+
+        onToggleMobileButton={onToggleMobileButton}
       />
     </div>
   )

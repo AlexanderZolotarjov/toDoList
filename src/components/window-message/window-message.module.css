@@ -45,3 +45,35 @@
 .windowMessage__button:focus {
   box-shadow: 0px 0px 0px 3px rgba(0, 0, 255, 0.349);
 }
+
+@media (max-width: 768px) {
+  .windowMessage__item {
+    border-radius: 20px;
+    width: 320px;
+    height: 220px;
+
+    grid-template-columns: 1fr minmax(60px, 100px) minmax(50px, 80px) minmax(60px, 100px) 1fr;
+    grid-template-rows: 1fr auto 36px 1fr;
+  }
+  .windowMessage__title {
+    padding: 20px 0 30px 0;
+    font-size: 20px;
+  }
+}
+@media (max-width: 425px) {
+  .windowMessage__item {
+    border-radius: 20px;
+    width: 290px;
+    height: 180px;
+
+    grid-template-columns: 1fr minmax(50px, 80px) minmax(40px, 60px) minmax(50px, 80px) 1fr;
+    grid-template-rows: 1fr auto 34px 1fr;
+  }
+  .windowMessage__title {
+    padding: 15px 0 24px 0;
+    font-size: 18px;
+  }
+  .windowMessage__button {
+    font-size: 18px;
+  }
+}

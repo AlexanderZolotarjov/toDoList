@@ -25,7 +25,7 @@ const TodoListItemButtons = ({
 
   return (
     <div className={styles.todoListItemButtons}>
-      { buttonList }
+      {buttonList}
     </div>
   )
 }

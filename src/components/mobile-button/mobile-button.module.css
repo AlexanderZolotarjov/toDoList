@@ -1,0 +1,42 @@
+.mobileButton {
+  margin: 10px 0 10px 5px;
+  width: 30px;
+  height: 20px;
+  position: relative;
+}
+@media (min-width: 425px) {
+  .mobileButton {
+    display: none;
+  }
+}
+.mobileButton span, .mobileButton::before, .mobileButton::after {
+  transition: all ease 0.3s;
+  position: absolute;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background: rgb(80, 75, 75);
+}
+.mobileButton span {
+  top: 9px;
+}
+.mobileButton::before {
+  content: '';
+  top: 0px;
+}
+.mobileButton::after {
+  content: '';
+  bottom: 0px;
+}
+
+.mobileButton_click span {
+  opacity: 0;
+}
+.mobileButton_click::before {
+  top: 9px;
+  transform: rotate(40deg);
+}
+.mobileButton_click::after {
+  bottom: 9px;
+  transform: rotate(-40deg);
+}

@@ -18,3 +18,25 @@
 .enterButtons {
   grid-area: enterButtons;
 }
+.mobileButton {
+  grid-area: mobileButton;
+}
+@media (max-width: 425px) {
+  .header {
+    display: grid;
+    grid-template-rows: 1fr 1fr auto;
+    grid-template-columns: 1fr auto 1fr auto;
+    grid-template-areas: 
+      "headerTitle headerTitle headerStatistics headerStatistics"
+      "enterPanel enterPanel enterPanel mobileButton"
+      "enterButtons enterButtons enterButtons enterButtons";
+  }
+  .enterButtons {
+    justify-self: center;
+  }
+}
+@media (max-width: 768px) {
+  .headerStatistics {
+    justify-self: end;
+  }
+}
